@@ -1,0 +1,231 @@
+.steps-how {
+    margin-top: 35px;
+
+    color: $main-font-color;
+}
+
+.section-heading {
+    font-family: $montserrat-bold;
+    font-size: 22px;
+    line-height: 25px;
+
+    margin-bottom: 15px;
+
+    text-align: center;
+
+    color: $other-font-color;
+}
+
+.jcarousel {
+    position: relative;
+
+    overflow: hidden;
+
+    width: 300px;
+    height: 240px;
+    margin: 0 auto;
+
+    @include border-radius(4px);
+    &__list {
+        position: relative;
+
+        width: 10000em;
+        margin: 0;
+        padding: 0;
+
+        list-style: none;
+    }
+    &__item {
+        float: left;
+    }
+    &:nth-of-type(2) {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+.arrow {
+    position: absolute;
+    top: 0;
+
+    width: 150px;
+    height: 240px;
+
+    background-image: none;
+    &--left {
+        left: 0;
+    }
+    &--right {
+        right: 0;
+    }
+}
+
+.step {
+    display: table;
+
+    width: 300px;
+    height: 240px;
+    margin: 0 auto;
+
+    @include border-radius(4px);
+    &__wrapper {
+        display: table-cell;
+
+        padding: 0 19px;
+
+        text-align: left;
+        vertical-align: bottom;
+    }
+    &__num {
+        font-family: $montserrat-regular;
+        font-size: 10px;
+        line-height: 20px;
+
+        display: block;
+
+        width: 70px;
+        height: 20px;
+        margin: 0 0 15px 2px;
+
+        text-align: center;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+
+        background-color: $brand-color;
+
+        @include border-radius(10px);
+    }
+    &__heading {
+        font-family: $montserrat-bold;
+        font-size: 24px;
+        line-height: 29px;
+
+        margin-bottom: 13px;
+    }
+    &__text {
+        font-family: $roboto-light;
+        font-size: 14px;
+        line-height: 16px;
+
+        padding-bottom: 17px;
+
+        color: $step-font-color;
+    }
+    &--1 {
+        background: url(../images/step1.jpg) no-repeat;
+    }
+    &--2 {
+        background: url(../images/step2.jpg) no-repeat;
+    }
+    &--3 {
+        background: url(../images/step3.jpg) no-repeat;
+    }
+}
+
+
+
+/* >768px */
+
+@media screen and (min-width:768px) {
+    .steps-how {
+        margin-top: 95px;
+    }
+
+    .section-heading {
+        margin-bottom: 35px;
+    }
+
+    .jcarousel {
+        display: inline-block;
+
+        width: 235px;
+        height: 400px;
+        &:nth-of-type(2) {
+            margin: 0 17px;
+        }
+    }
+
+    .step {
+        height: 400px;
+        &__wrapper {
+            display: table-cell;
+
+            width: 232px;
+            height: 400px;
+            padding: 18px;
+
+            vertical-align: bottom;
+        }
+        &__text {
+            display: block;
+
+            width: 201px;
+            padding-bottom: 0;
+
+            vertical-align: bottom;
+        }
+    }
+
+    .arrow {
+        position: absolute;
+        top: 40px;
+
+        display: block;
+
+        width: $arrow-left-width;
+        height: $arrow-left-height;
+
+        cursor: pointer;
+        &--left {
+            left: 20px;
+
+            background: url(#{$arrow-left-image}) $arrow-left-offset-x $arrow-left-offset-y no-repeat;
+        }
+        &--right {
+            right: 20px;
+
+            background: url(#{$arrow-right-image}) $arrow-right-offset-x $arrow-right-offset-y no-repeat;
+        }
+        &:hover {
+            opacity: .8;
+        }
+        &:active {
+            opacity: 1;
+        }
+    }
+}
+
+
+
+/* >960px */
+
+@media screen and (min-width:960px) {
+    .width-wrapper--steps-how {
+        padding: 0 10px;
+    }
+
+    .jcarousel {
+        width: 300px;
+        &:nth-of-type(2) {
+            margin: 0 15px;
+        }
+    }
+
+    .step__text {
+        width: 264px;
+    }
+
+    .step__num {
+        margin-bottom: 13px;
+    }
+
+    .arrow {
+        top: 153px;
+        &--left {
+            left: 21px;
+        }
+        &--right {
+            right: 21px;
+        }
+    }
+}

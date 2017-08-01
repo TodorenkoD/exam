@@ -1,0 +1,22 @@
+// fonts
+
+@mixin font-face($font-name, $font-file) {
+  @font-face {
+    font-family: '#{$font-name}';
+    font-weight: normal;
+    font-style: normal;
+    src: url('#{$font-file}.eot');
+    src: url('#{$font-file}.eot?#iefix') format('embedded-opentype'),
+    url('#{$font-file}.woff2') format('woff2'),
+    url('#{$font-file}.woff') format('woff'),
+    url('#{$font-file}.ttf') format('truetype');
+  }
+}
+
+@include font-face('montserratbold',    '../fonts/montserrat-bold-webfont');
+@include font-face('montserratregular', '../fonts/montserrat-regular-webfont');
+@include font-face('robotolight',       '../fonts/roboto-light-webfont');
+
+$montserrat-bold: 'montserratbold', sans-serif;
+$montserrat-regular: 'montserratregular', sans-serif;
+$roboto-light: 'robotolight', sans-serif;

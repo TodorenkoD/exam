@@ -1,0 +1,149 @@
+.discover {
+    margin-top: 35px;
+}
+
+.grid {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.tile {
+    display: table;
+
+    width: 300px;
+    height: 120px;
+    margin: 0 auto;
+    margin-right: 10px;
+    margin-bottom: 10px;
+
+    border: 1px solid $step-font-color;
+
+    @include border-radius(4px);
+    &__name {
+        font-family: $montserrat-bold;
+        font-size: 24px;
+        line-height: 120px;
+
+        width: 290px;
+        margin: 0;
+        padding: 0 15px;
+
+        text-align: center;
+
+        color: $main-font-color;
+    }
+}
+
+.search {
+    margin-top: 27px;
+    margin-bottom: 40px;
+
+    text-align: center;
+    &__desc {
+        font-family: $roboto-light;
+        font-size: 18px;
+
+        margin-bottom: 17px;
+
+        color: $other-font-color;
+    }
+    &__input {
+        display: block;
+
+        width: 280px;
+        height: 40px;
+        margin: 0 auto 10px;
+        padding: 0 15px;
+
+        border: 1px solid #ccc;
+        box-shadow: 0 1px #eee;
+
+        @include border-radius(4px);
+    }
+}
+
+.button--search {
+    width: 280px;
+    margin-left: -4px;
+
+    border-color: $brand-color;
+    background-color: $brand-color;
+
+    @include button;
+    &:hover {
+        color: $brand-color;
+        background-color: transparent;
+        border-color: $brand-color;
+    }
+}
+
+
+
+
+/* >768px */
+
+@media screen and (min-width:768px) {
+    .discover {
+        margin-top: 97px;
+    }
+
+    .grid {
+        width: 100%;
+    }
+
+    .tile {
+        width: 236px;
+        height: 307px;
+        margin: 0 0 20px 0;
+        &--width2 {
+            width: 492px;
+        }
+        &__name {
+            line-height: 307px;
+
+            width: 100%;
+        }
+    }
+
+    .search {
+        margin: 78px 0 100px 0;
+        &__desc {
+            margin-bottom: 38px;
+        }
+        &__input {
+            display: inline-block;
+
+            width: 240px;
+            margin: 0 12px 0 0;
+        }
+    }
+
+    .button--search {
+        display: inline-block;
+
+        width: 160px;
+
+        vertical-align: bottom;
+    }
+}
+
+
+
+
+/* >960px */
+
+@media screen and (min-width:960px) {
+    .tile {
+        width: 300px;
+        &--width2 {
+            width: 620px;
+        }
+        &:nth-child(2n+3) {
+            margin-right: 0;
+        }
+    }
+
+    .search {
+        margin-bottom: 102px;
+    }
+}

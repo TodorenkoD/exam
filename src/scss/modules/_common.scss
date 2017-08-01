@@ -1,0 +1,44 @@
+// common styles
+* {
+    box-sizing: border-box;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: $main-font-color;
+}
+
+.cf {
+    zoom: 1;
+    &:before,
+    &:after {
+        content: ".";
+        display: block;
+        height: 0;
+        overflow: hidden;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+.width-wrapper {
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 0 10px;
+
+    text-align: center;
+}
+
+@media screen and (min-width:768px) {
+    .width-wrapper {
+        width: 768px;
+    }
+}
+
+@media screen and (min-width:960px) {
+    .width-wrapper {
+        width: 960px;
+    }
+}

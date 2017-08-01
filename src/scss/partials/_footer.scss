@@ -1,0 +1,136 @@
+.footer {
+    text-align: center;
+
+    border-top: 4px solid $brand-color;
+    &__heading {
+        font-family: $montserrat-bold;
+        font-size: 16px;
+
+        margin-top: 18px;
+        margin-bottom: 15px;
+
+        letter-spacing: .8px;
+        text-transform: uppercase;
+
+        color: $brand-color;
+    }
+}
+
+.footer-nav {
+    overflow: hidden;
+
+    width: 194px;
+    margin: 0 auto 15px auto;
+    &__head {
+        font-family: $montserrat-bold;
+        font-size: 14px;
+
+        margin-bottom: 5px;
+
+        color: $other-font-color;
+    }
+    &__item {
+        float: left;
+
+        margin-right: 12px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__link {
+        font-family: $roboto-light;
+        font-size: 14px;
+
+        text-align: center;
+
+        color: #666;
+        &:hover {
+            color: #000;
+        }
+    }
+}
+
+.copyright {
+    &__head {
+        font-family: $montserrat-bold;
+        font-size: 10px;
+
+        margin-top: 16px;
+
+        letter-spacing: 1px;
+        text-transform: uppercase;
+
+        color: $step-font-color;
+    }
+    &__logo {
+        margin: 8px 0 15px 0;
+    }
+}
+
+
+/* >768px */
+
+@media screen and (min-width:768px) {
+    .width-wrapper--footer {
+        padding-top: 38px;
+    }
+
+    .footer__heading {
+        margin: 0 82px 0 30px;
+    }
+
+    .footer__heading,
+    .company-wrapper,
+    .partners-wrapper,
+    {
+        float: left;
+    }
+
+    .footer-nav {
+        width: 170px;
+        &__head {
+            margin-bottom: 11px;
+
+            text-align: left;
+        }
+        &__item {
+            line-height: 24px;
+
+            float: none;
+
+            text-align: left;
+        }
+    }
+
+    .copyright {
+        float: right;
+
+        margin-right: 30px;
+        &__head {
+            margin-top: 0;
+            margin-left: 30px;
+        }
+    }
+}
+
+
+/* >960px */
+
+@media screen and (min-width:960px) {
+    .width-wrapper {
+        width: 960px;
+    }
+
+    .footer__heading {
+        margin-right: 96px;
+        margin-left: 0;
+    }
+
+    .footer-nav {
+        width: 160px;
+    }
+
+    .copyright {
+        margin-right: 0;
+    }
+}

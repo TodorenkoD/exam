@@ -1,0 +1,180 @@
+.header {
+    margin-top: -1px;
+
+    text-align: center;
+
+    color: $main-font-color;
+    border-top: 1px solid #fff;
+    background: url(../images/header_bg.jpg) center no-repeat;
+    background-size: cover;
+    &__heading {
+        font-family: $montserrat-bold;
+        font-size: 20px;
+
+        padding-bottom: 30px;
+
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+    &__slogan {
+        font-family: $montserrat-bold;
+        font-size: 30px;
+        line-height: 36px;
+
+        padding-bottom: 10px;
+
+        text-transform: uppercase;
+    }
+    &__subslogan {
+        font-family: $roboto-light;
+        font-size: 18px;
+        line-height: 20px;
+
+        width: 79%;
+        margin: auto;
+        padding-bottom: 17px;
+    }
+}
+
+.register {
+    padding: 20px 0 117px 0;
+    &__link {
+        font-family: $montserrat-bold;
+        font-size: 14px;
+        line-height: 36px;
+
+        height: 36px;
+        margin-right: 21px;
+        padding: 0 16px;
+
+        border: none;
+        border: 2px solid transparent;
+        &:hover {
+            border: 2px solid #fff;
+            border-radius: 20px;
+            background-color: transparent;
+        }
+        &--outlined {
+            margin-left: -23px;
+
+            border: 2px solid #fff;
+            border-radius: 20px;
+            &:hover {
+                border-color: transparent;
+            }
+        }
+    }
+}
+
+.button--header {
+    width: 280px;
+    margin-bottom: 138px;
+
+    border-color: $brand-color;
+    background-color: $brand-color;
+
+    @include button;
+    &:hover {
+        color: $brand-color;
+        border-color: $brand-color;
+        background-color: transparent;
+    }
+}
+
+
+
+
+
+
+/* >768px */
+
+@media screen and (min-width:768px) {
+    .width-wrapper--header {
+        width: 768px;
+    }
+
+    .register {
+        float: right;
+        /*padding: 38px 20px 0 0;*/
+        padding: 38px 0 0 0;
+        &__link {
+            margin-right: 21px;
+            &--outlined {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .header__heading {
+        float: left;
+
+        padding: 48px 0 0 38px;
+    }
+
+    .float-wrapper {
+        margin-bottom: 143px;
+        &::after {
+            @include clearfix;
+        }
+    }
+
+    .header {
+        &__slogan {
+            font-size: 52px;
+            line-height: 62px;
+
+            width: 490px;
+            margin: 0 auto;
+            padding-bottom: 28px;
+        }
+        &__subslogan {
+            font-size: 24px;
+
+            padding-bottom: 37px;
+        }
+    }
+
+    .button--header {
+        margin-bottom: 234px;
+
+        border-color: $brand-color;
+        background-color: $brand-color;
+
+        @include button;
+        &:hover {
+            color: $brand-color;
+            border-color: $brand-color;
+            background-color: transparent;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* >960px */
+
+@media screen and (min-width:960px) {
+    .width-wrapper--header {
+        width: 960px;
+    }
+
+    .register {
+        padding-right: 0;
+        &__link {
+            margin: 0;
+        }
+    }
+
+    .header__heading {
+        padding-left: 0;
+    }
+}

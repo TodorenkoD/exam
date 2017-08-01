@@ -1,0 +1,27 @@
+// mixins
+@mixin clearfix {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+@mixin border-radius($r) {
+
+    -moz-border-radius: $r;
+    -webkit-border-radius: $r;
+    -khtml-border-radius: $r;
+    border-radius: $r;
+}
+
+@mixin button {
+    font-family: $montserrat-bold;
+    font-size: 14px;
+    line-height: 40px;
+
+    height: 40px;
+
+    border: 2px solid transparent;
+    @include border-radius(20px);
+}
